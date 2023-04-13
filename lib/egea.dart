@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'alma.dart';
+
 class fiategea extends StatefulWidget {
   const fiategea({Key? key}) : super(key: key);
 
@@ -38,7 +40,19 @@ class _fiategeaState extends State<fiategea> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF1A237E),
+                      shape: StadiumBorder(),
+
+                      shadowColor: Colors.black
+
+                  ),
+
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => alma()),
+                    );
 
                   },
                   child: Text('AL'),

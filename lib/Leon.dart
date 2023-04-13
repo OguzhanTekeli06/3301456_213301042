@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hafta4/Galeri.dart';
+import 'package:hafta4/alma.dart';
 import 'package:hafta4/main.dart';
+import 'package:hafta4/togg.dart';
 
 class leon extends StatefulWidget {
   const leon({Key? key}) : super(key: key);
@@ -59,7 +61,19 @@ class _leonState extends State<leon> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF1A237E),
+                      shape: StadiumBorder(),
+                      shadowColor: Colors.black
+
+
+                  ),
+
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => alma()),
+                    );
 
                   },
                   child: Text('AL'),

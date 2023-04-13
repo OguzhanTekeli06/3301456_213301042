@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'alma.dart';
+
 class renaultmegane extends StatefulWidget {
   const renaultmegane({Key? key}) : super(key: key);
 
@@ -41,7 +43,19 @@ class _renaultmeganeState extends State<renaultmegane> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF1A237E),
+                      shape: StadiumBorder(),
+
+                      shadowColor: Colors.black
+
+                  ),
+
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => alma()),
+                    );
 
                   },
                   child: Text('AL'),

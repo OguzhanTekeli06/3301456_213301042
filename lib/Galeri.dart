@@ -26,7 +26,9 @@ class _galeriState extends State<galeri> {
     butce = data[1];
 
     return Scaffold(
-      appBar: AppBar(title: Text('galeri'),
+      backgroundColor: Color(0xFFEEEEEE),
+
+      appBar: AppBar(title: Text('Galeri'),
       backgroundColor: Colors.indigo,),
       body: Center(
         child: Column(
@@ -39,7 +41,7 @@ class _galeriState extends State<galeri> {
 
 
 
-            Text('Hoş Geldiniz ' + adsoyad +' .', style: TextStyle(fontSize: 20.0)),
+            Text('Hoş Geldiniz ' + adsoyad +' .', style: TextStyle(fontSize: 30.0)),
             Text('Bütçenizi ' + butce +' olarak belirlediniz.', style: TextStyle(fontSize: 20.0)),
             Text('Araçlarımız:', style: TextStyle(fontSize: 40.0)),
 
@@ -248,6 +250,12 @@ class _galeriState extends State<galeri> {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF1A237E),
+                    shape: StadiumBorder(),
+                    shadowColor: Colors.black
+                ),
+
                 onPressed: () {
                   Navigator.push(
                     context,

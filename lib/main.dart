@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:hafta4/Galeri.dart';
 import 'package:hafta4/Hakkında.dart';
 import 'package:hafta4/Leon.dart';
+import 'package:hafta4/alma.dart';
 import 'package:hafta4/egea.dart';
 import 'package:hafta4/i20.dart';
 import 'package:hafta4/megane.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       ),
     initialRoute: '/',
     routes: {
-      // '/': (context) => MyHomePage(title:"Anasayfa",),
+
       '/leon': (context) => const leon(),
       '/galeri': (context) => galeri(),
       '/Hakkinda': (context) => Hakkinda(),
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
       '/renaultmegane' : (context) => renaultmegane(),
       '/toggcsedan' : (context) => toggcsedan(),
       'passat' : (context) => passat(),
+      '/alma'  : (context) => alma(),
 
 
 
@@ -112,8 +114,9 @@ void adsoyadkaydet(String text){
 
 
     return Scaffold(
+      backgroundColor: Color(0xFFEEEEEE),
       appBar: AppBar(
-        backgroundColor: Colors.indigo,
+        backgroundColor: Color(0xFF1A237E),
 
 
 
@@ -129,8 +132,10 @@ void adsoyadkaydet(String text){
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
+                style: TextStyle(color: Colors.indigo),
                 onChanged: (text){adsoyadkaydet(text);} ,
                 decoration: const InputDecoration(
+                  hintStyle:TextStyle(color: Colors.indigo) ,
                   hintText: 'Adınızı ve Soyadınızı Giriniz',
                 ),
                 keyboardType: TextInputType.text,
@@ -145,8 +150,10 @@ void adsoyadkaydet(String text){
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
+                style: TextStyle(color: Colors.indigo),
                 onChanged: (text){butcekaydet(text);} ,
                 decoration: const InputDecoration(
+                  hintStyle:TextStyle(color: Colors.indigo) ,
                   hintText: 'Bütçenizi Giriniz',
                 ),
                 keyboardType: TextInputType.number,
@@ -156,6 +163,15 @@ void adsoyadkaydet(String text){
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: ElevatedButton(
+
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF1A237E),
+                  shape: StadiumBorder(),
+                    elevation: 10.0,
+                    shadowColor: Colors.black
+
+                ),
+
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -172,7 +188,17 @@ void adsoyadkaydet(String text){
             ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(onPressed: () {
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF1A237E),
+                    //elevation: 10.0,
+                    shape: StadiumBorder(),
+                    shadowColor: Colors.black
+
+
+                ),
+
+                onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Hakkinda()),

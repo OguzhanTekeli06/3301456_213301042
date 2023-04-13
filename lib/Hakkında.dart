@@ -22,6 +22,13 @@ class _HakkindaState extends State<Hakkinda> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF1A237E),
+                      shape: StadiumBorder(),
+                      shadowColor: Colors.black
+
+                  ),
+
                   onPressed: () {
                     Navigator.pushNamed(context, '/');
                   },

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'alma.dart';
+
 class i20 extends StatefulWidget {
   const i20({Key? key}) : super(key: key);
 
@@ -42,7 +44,19 @@ class _i20State extends State<i20> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF1A237E),
+                      shape: StadiumBorder(),
+
+                      shadowColor: Colors.black
+
+                  ),
+
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => alma()),
+                    );
 
                   },
                   child: Text('AL'),
